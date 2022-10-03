@@ -1,0 +1,56 @@
+* {
+    margin: 0px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5.5vw;
+    color: #FFFFFF;
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+.game-board {
+    /* border: 2px solid blue; */
+
+    width: 80%;
+    margin: auto; 
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    /* border: 2px solid red; */
+    margin: 15px 5px;
+    position: relative;
+
+    width: 20%;
+
+    /* height: 0;
+    width: 20%;
+    padding-bottom: 20%; */
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.base, .image {
+    width: 100%;
+    border: 3px solid #FFFFFF;
+    border-radius: 10px;
+}
+
