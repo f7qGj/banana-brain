@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $('.game-over').hide();
     let cardOne = null;
     let cardTwo = null;
     const images = [
@@ -15,8 +16,16 @@ $(document).ready(function() {
         '11.jpg',
         '12.jpg'
     ];
+    const giphy = [
+        'https://giphy.com/embed/EWWdvQngcLt6g',
+        'https://giphy.com/embed/3ohryhNgUwwZyxgktq',
+        'https://giphy.com/embed/lSPtp0kCFqKsgtsQ8k'
+    ];
     let fullSetOfCards = images.concat(images);
     let flag = 0;
+    let matches = 0;
+    let misses = 0;
+    
     createCardElements();
     clickHandler();
 
@@ -83,7 +92,10 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('.image').hide();
                 $('.base').show();
+                misses++;
+                $('.misses').text(misses);
             }, 2000);
+            
         }
 
         setTimeout(function() {
@@ -97,6 +109,22 @@ $(document).ready(function() {
     function removeCards() {
         $('.tagged').css('visibility', 'hidden');
         flag--;
+        matches++;
+        $('.wins').text(matches);
+        checkScoreBoard();
+    }
+
+    function checkScoreBoard() {
+        if (matches == 12) {
+            $('.game-board').remove();
+            gameWon();
+        }
+    }
+
+    function gameWon() {
+        $('.score-board').remove();
+        $('.game-over').show();
+        $('.game-over iframe').attr('src', 'https://giphy.com/embed/lSPtp0kCFqKsgtsQ8k');
     }
 
 });
