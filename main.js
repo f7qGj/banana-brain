@@ -19,7 +19,24 @@ $(document).ready(function() {
     const giphy = [
         'https://giphy.com/embed/EWWdvQngcLt6g',
         'https://giphy.com/embed/3ohryhNgUwwZyxgktq',
-        'https://giphy.com/embed/lSPtp0kCFqKsgtsQ8k'
+        'https://giphy.com/embed/lSPtp0kCFqKsgtsQ8k',
+        'https://giphy.com/embed/xT5LMqGuvNAOr06YcU',
+        'https://giphy.com/clips/buzzfeed-buzzfeed-celeb-owen-wilson-the-cast-of-cars-3-take-a-written-drivers-Atx1IgqtSq7B5MB3BN',
+        'https://giphy.com/embed/gK6c42eKAKXQnM0TEw',
+        'https://giphy.com/embed/249HnqKvOomiHHbacr',
+        'https://giphy.com/embed/xUPGcJMf2O2owgCXCg',
+        'https://giphy.com/embed/GRdos3E3CYylsjonC1',
+        'https://giphy.com/embed/GMDicB9AQQ2FxYPAZZ',
+        'https://giphy.com/embed/nqi89GMgyT3va',
+        'https://giphy.com/embed/l3q2Z6S6n38zjPswo',
+        'https://giphy.com/embed/xeXEpUVvAxCV2',
+        'https://giphy.com/embed/vvz5AVSb96m0FY9XFb',
+        'https://giphy.com/embed/AGd0FlElEhcRy',
+        'https://giphy.com/embed/l0HlxRrCYYFVVfwWY',
+        'https://giphy.com/embed/26FfgASqOyPzxjhRe',
+        'https://giphy.com/embed/0nj9dmVLbtmvW4OZvr',
+        'https://giphy.com/embed/XD9WaokEhO1JQkTyKp',
+        'https://giphy.com/embed/10ERZqYioLWJ6U',
     ];
     let fullSetOfCards = images.concat(images);
     let flag = 0;
@@ -124,7 +141,7 @@ $(document).ready(function() {
     function gameWon() {
         $('.score-board').remove();
         $('.game-over').show();
-        $('.game-over iframe').attr('src', 'https://giphy.com/embed/lSPtp0kCFqKsgtsQ8k');
+        $('.game-over iframe').attr('src', giphy[Math.round(Math.random())]);
     }
 
 });

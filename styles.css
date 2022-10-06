@@ -58,6 +58,7 @@ h1 {
 .score-board {
     text-align: center;
     margin-bottom: 4vw;
+    font-size: 3vw;
 }
 
 .game-over {
